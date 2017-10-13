@@ -5,12 +5,12 @@ function Person1() {
 function Person2() {
     var name;
 
-    this.setName = function(name) {
-        this.name = name;
+    this.setName = function(_name) {
+        name = _name;
     };
 
     this.getName = function() {
-        return this.name;
+        return name;
     }
 }
 
