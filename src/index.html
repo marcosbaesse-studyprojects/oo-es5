@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>OOP Javascript</p>
+    <script>
+        function Person1() {
+            var name;
+        }
+
+        function Person2() {
+            var name;
+
+            this.setName = function(_name) {
+                name = _name;
+            };
+
+            this.getName = function() {
+                return name;
+            }
+        }
+
+        var marcos = new Person1();
+        marcos.name = 'Marcos';
+
+        console.log(marcos.name); // Marcos
+
+        marcos = new Person2();
+        marcos.setName('Marcos');
+        console.log(marcos.getName()); // Marcos
+        console.log(marcos.name); // undefined
+        marcos.name = 'Baésse'; // 
+        console.log(marcos.getName()); // Marcos
+        console.log(marcos.name); // Baésse
+    </script>
+    
+</body>
+</html>
